@@ -1,11 +1,12 @@
-import openai 
+import openai
 import json
 from dotenv import dotenv_values
-from  IPython.display import Markdown, display
+from IPython.display import Markdown, display
 
 config = dotenv_values(".env")
 
 openai.api_key = config["OPENAI_API_KEY"]
+
 
 def get_and_render_colors(msg):
     prompt = f"""
@@ -20,17 +21,15 @@ def get_and_render_colors(msg):
     """
 
     response = openai.Completion.create(
-        prompt= prompt,
+        prompt=prompt,
         model="text-davinci-003",
         max_tokens=100,
 
     )
 
-
     colors = json.loads(response.choices[0].text)
 
     return colors
-
 
 
 get_and_render_colors("facebooklogo")
