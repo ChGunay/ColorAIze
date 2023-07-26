@@ -31,5 +31,3 @@ def get_and_render_colors(msg):
 
     return colors
 
-
-get_and_render_colors("facebooklogo")
