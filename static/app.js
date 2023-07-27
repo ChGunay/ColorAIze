@@ -37,6 +37,6 @@ function cerateColorBoxes(colors, parent) {
     const span = document.createElement("span");
     span.innerText = color;
     div.appendChild(span);
-    container.appendChild(div);
+    parent.appendChild(div);
   }
 }
