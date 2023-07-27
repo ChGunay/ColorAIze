@@ -29,7 +29,7 @@ function cerateColorBoxes(colors, parent) {
     const div = document.createElement("div");
     div.classList.add("color");
     div.style.backgroundColor = color;
-    div.style.width = `calc(100% / ${data.colors.length})`;
+    div.style.width = `calc(100% / ${colors.length})`;
     div.addEventListener("click", function () {
       navigator.clipboard.writeText(color);
     });
